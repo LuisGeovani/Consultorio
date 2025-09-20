@@ -1,7 +1,7 @@
-[ ] - Paciente: Giovani
-[ ] - Atendimento: José
+[X] - Paciente: Giovani
+[X] - Atendimento: José
 [ ] - Profissional: Sofisma
 [ ] - Usuario: Clara
-[ ] - Convenio: Paulo
-[ ] - Unidade: Paulo
-[ ] - Especialidade: Paulo 
+[X] - Convenio: Paulo
+[X] - Unidade: Paulo
+[X] - Especialidade: Paulo 
