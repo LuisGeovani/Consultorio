@@ -1,3 +1,5 @@
+import java.io.Console;
+
 public class Convenio {
     // Atributos
     private Long id;
@@ -75,5 +77,7 @@ public class Convenio {
         "Email:"         + this.getEmail()         + "\n" +
         "Telefone:"      + this.getTelefone()      + "\n" +
         "Ativo:"         + isAtivo()               + "\n";
+
+        System.out.println(info);
     }
 }
