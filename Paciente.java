@@ -1,11 +1,11 @@
-import java.util.Date;
+import java.util.Scanner;
 
 public class Paciente{
-    private  long id;
+    private long id;
     private String nome;
     private String email;
     private String telefone;
-    private Date dataNascimento;
+    private String dataNascimento;
     private String grupoSanguineo;
     private String sexo;
     private String cep;
@@ -41,17 +41,16 @@ public class Paciente{
         return telefone;
     }
 
-    public void setDataNascimento(Date dataNascimento){
+    public void setDataNascimento(String dataNascimento){
         this.dataNascimento = dataNascimento;
     }
-    public Date getDataNascimento(){
+    public String getDataNascimento(){
         return dataNascimento;
     }
 
     public String getGrupoSanguineo() {
         return grupoSanguineo;
     }
-
     public void setGrupoSanguineo(String grupoSanguineo) {
         this.grupoSanguineo = grupoSanguineo;
     }
@@ -59,7 +58,6 @@ public class Paciente{
     public String getSexo() {
         return sexo;
     }
-
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
@@ -67,7 +65,6 @@ public class Paciente{
     public String getCep() {
         return cep;
     }
-
     public void setCep(String cep) {
         this.cep = cep;
     }
@@ -75,7 +72,6 @@ public class Paciente{
     public String getEndereco() {
         return endereco;
     }
-
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
@@ -83,7 +79,6 @@ public class Paciente{
     public String getCidade() {
         return cidade;
     }
-
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
@@ -91,8 +86,57 @@ public class Paciente{
     public String getEstado() {
         return estado;
     }
-
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    public static Paciente AdicionarPaciente() {
+        Paciente paciente = new Paciente();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("-- Criando um novo paciente --");
+
+        System.out.println("Digite o Id do paciente:");
+        paciente.setId(scanner.nextLong());
+
+        scanner.nextLine();
+
+        System.out.println("Digite o Nome do paciente:");
+        paciente.setNome(scanner.nextLine());
+
+        // System.out.println("Digite o Email do paciente:");
+        // paciente.setEmail(scanner.nextLine());
+
+        // System.out.println("Digite o Telefone do paciente:");
+        // paciente.setTelefone(scanner.nextLine());
+
+        // System.out.println("Digite a Data de Nascimento do paciente:");
+        // paciente.setDataNascimento(scanner.nextLine());
+
+        // System.out.println("Digite o Grupo Sanguíneo do paciente:");
+        // paciente.setGrupoSanguineo(scanner.nextLine());
+
+        // System.out.println("Digite o Sexo do paciente:");
+        // paciente.setSexo(scanner.nextLine());
+
+        // System.out.println("Digite o CEP do paciente:");
+        // paciente.setCep(scanner.nextLine());
+
+        // System.out.println("Digite o Endereço do paciente:");
+        // paciente.setEndereco(scanner.nextLine());
+
+        // System.out.println("Digite a Cidade do paciente:");
+        // paciente.setCidade(scanner.nextLine());
+
+        // System.out.println("Digite o Estado do paciente:");
+        // paciente.setEstado(scanner.nextLine());
+
+        return paciente;
+    }
+
+    public static void main(String[] args) {
+        Paciente novoPaciente = AdicionarPaciente();
+        System.out.println("Paciente " + novoPaciente.getNome() + " Adicionado \n Dados do paciente:");
+        System.out.println(novoPaciente.getId());
+    }
+
 }
