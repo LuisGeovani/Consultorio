@@ -25,7 +25,7 @@ public class Convenio {
     public String getRepresentante() {
         return this.representante;
     } 
-    public String getemail() {
+    public String getEmail() {
         return this.email;
     } 
     public String getTelefone() {
@@ -57,7 +57,23 @@ public class Convenio {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     } 
-    public void isAtivo(boolean ativo) {
+    public void setAtivo(boolean ativo) {
         this.ativo = ativo;
+    }
+
+    // Métodos da classe 
+    public void toggleAtivo() {
+        this.setAtivo(!this.isAtivo());
+    }
+    public void info() {
+        String info = "" +
+        "Id:"            + this.getId()            + "\n" +
+        "Nome:"          + this.getNome()          + "\n" +
+        "Razão Social:"  + this.getRazaoSocial()   + "\n" +
+        "CNPJ:"          + this.getCnpj()          + "\n" +
+        "Representante:" + this.getRepresentante() + "\n" +
+        "Email:"         + this.getEmail()         + "\n" +
+        "Telefone:"      + this.getTelefone()      + "\n" +
+        "Ativo:"         + isAtivo()               + "\n";
     }
 }
