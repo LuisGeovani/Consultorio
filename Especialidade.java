@@ -3,7 +3,7 @@ public class Especialidade {
     private long id;
     private String nome;
 
-    // Métodos acessores
+    // Métodos acessores 
     public long getId() {
         return this.id;
     }

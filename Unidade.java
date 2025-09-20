@@ -12,7 +12,7 @@ public class Unidade {
         return this.nome;
     }
     public String getEndereco() {
-        return this.endereco;
+        return this.endereco; 
     }
 
     // Métodos modificadores
