@@ -103,40 +103,56 @@ public class Paciente{
         System.out.println("Digite o Nome do paciente:");
         paciente.setNome(scanner.nextLine());
 
-        // System.out.println("Digite o Email do paciente:");
-        // paciente.setEmail(scanner.nextLine());
+        System.out.println("Digite o Email do paciente:");
+        paciente.setEmail(scanner.nextLine());
 
-        // System.out.println("Digite o Telefone do paciente:");
-        // paciente.setTelefone(scanner.nextLine());
+        System.out.println("Digite o Telefone do paciente:");
+        paciente.setTelefone(scanner.nextLine());
 
-        // System.out.println("Digite a Data de Nascimento do paciente:");
-        // paciente.setDataNascimento(scanner.nextLine());
+        System.out.println("Digite a Data de Nascimento do paciente:");
+        paciente.setDataNascimento(scanner.nextLine());
 
-        // System.out.println("Digite o Grupo Sanguíneo do paciente:");
-        // paciente.setGrupoSanguineo(scanner.nextLine());
+        System.out.println("Digite o Grupo Sanguíneo do paciente:");
+        paciente.setGrupoSanguineo(scanner.nextLine());
 
-        // System.out.println("Digite o Sexo do paciente:");
-        // paciente.setSexo(scanner.nextLine());
+        System.out.println("Digite o Sexo do paciente:");
+        paciente.setSexo(scanner.nextLine());
 
-        // System.out.println("Digite o CEP do paciente:");
-        // paciente.setCep(scanner.nextLine());
+        System.out.println("Digite o CEP do paciente:");
+        paciente.setCep(scanner.nextLine());
 
-        // System.out.println("Digite o Endereço do paciente:");
-        // paciente.setEndereco(scanner.nextLine());
+        System.out.println("Digite o Endereço do paciente:");
+        paciente.setEndereco(scanner.nextLine());
 
-        // System.out.println("Digite a Cidade do paciente:");
-        // paciente.setCidade(scanner.nextLine());
+        System.out.println("Digite a Cidade do paciente:");
+        paciente.setCidade(scanner.nextLine());
 
-        // System.out.println("Digite o Estado do paciente:");
-        // paciente.setEstado(scanner.nextLine());
+        System.out.println("Digite o Estado do paciente:");
+        paciente.setEstado(scanner.nextLine());
 
         return paciente;
     }
 
+    @Override
+    public String toString(){
+        return
+                "ID: " + id + "\n" +
+                "Nome: " + nome + "\n" +
+                "Email: " + email + "\n" +
+                "Telefone: " + telefone + "\n" +
+                "Data de Nascimento: " + dataNascimento + "\n" +
+                "Grupo Sanguíneo: " + grupoSanguineo + "\n" +
+                "Sexo: " + sexo + "\n" +
+                "CEP: " + cep + "\n" +
+                "Endereço: " + endereco + "\n" +
+                "Cidade: " + cidade + "\n" +
+                "Estado: " + estado + "\n";
+    }
+
     public static void main(String[] args) {
         Paciente novoPaciente = AdicionarPaciente();
-        System.out.println("Paciente " + novoPaciente.getNome() + " Adicionado \n Dados do paciente:");
-        System.out.println(novoPaciente.getId());
+        System.out.println("Paciente " + novoPaciente.getNome() + " adicionado");
+        System.out.println("\n" + novoPaciente);
     }
 
 }
