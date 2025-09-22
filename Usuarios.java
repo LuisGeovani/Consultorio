@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Usuarios {
     private Long id;
     private String nomeCompleto;
@@ -42,8 +44,31 @@ public class Usuarios {
     }
     public void setPapel(String papel) {
         this.papel = papel;
-    } 
+    }
+    
+    public static Usuarios cadastrar_usuario() {
+        Usuarios cadastro = new Usuarios();
+        Scanner  scam = new Scanner(System.in);
+        System.out.println("Insira seu nome completo: ");
+        cadastro.setNomeCompleto(scam.nextLine());
+        System.out.println("Crie seu nome de usuário: ");
+        cadastro.setNomeUsuario(scam.nextLine());
+        System.out.println("Crie sua senha: ");
+        cadastro.setSenha(scam.nextLine());
+        return cadastro;
+    }
 
+    @Override
+    public String toString(){
+        return 
+            "Nome Completo: " + nomeCompleto + "\n" +
+            "Nome Usuario: " + nomeUsuario + "\n";
+    }
+
+    public static void main(String[] args) {
+        Usuarios user = cadastrar_usuario();
+        System.out.println(user);
+    }
 }
 
 
