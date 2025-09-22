@@ -73,6 +73,13 @@ public class Atendimento {
 
     // -----------------------------------------------------------------------------
     public static void main(String[] args) {
-        Atendimento update = atualizarStatus();
+        // Criando uma instância de Atendimento
+        Atendimento atendimento = new Atendimento();
+
+        // Atualizando o status através do método da instância
+        atendimento.atualizarStatus("Em andamento");
+
+        // Exibindo o status atualizado
+        System.out.println("Status: " + atendimento.getStatus());
     }
 }
